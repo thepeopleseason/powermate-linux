@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+#
+if [ -e /tmp/.evrouter:0.0 ]
+    then
+    kill -3 `cat /tmp/.evrouter:0.0`
+    rm -f /tmp/.evrouter:0.0
+fi
+if [ -e /dev/input/by-id/usb-Griffin_Technology__Inc._Griffin_PowerMate-event-if00 ]
+    then
+    evrouter -c /etc/evrouterrc /dev/input/by-id/usb-Griffin_Technology__Inc._Griffin_PowerMate-event-if00
+fi

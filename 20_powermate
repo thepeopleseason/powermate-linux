@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case "$1" in
+    suspend)
+        # executed on suspend
+        ;;
+    resume)
+        # executed on resume
+        /usr/local/bin/powermate
+        ;;
+    *)
+        ;;
+esac
